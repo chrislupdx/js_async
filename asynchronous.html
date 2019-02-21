@@ -9,18 +9,35 @@
 <body>
     <h1>Asynchronous JavaScript</h1>
     <script>
-        const second = () => {
-            setTimeout(() => {
-                console.log('200 units later');
-            }, 2000);
-        }
+        // const second = () => {
+        //     setTimeout(() => {
+        //         console.log('200 units later');
+        //     }, 2000);
+        // }
 
-         const first = () => {
-             console.log('ugh');
-             second();
-             console.log("aftersecond");
-         }
-         first();
+        //  const first = () => {
+        //      console.log('ugh');
+        //      second();
+        //      console.log("aftersecond");
+        //  }
+        //  first();
+
+function getRecipe() {
+    setTimeout(() => {
+        const recipeId = [1,2,3,4,5];
+        console.log(recipeId)
+
+        setTimeout( (id) => {
+            const recipe= {title: "ugh", publisher: "sure"};
+            console.log('${id}: ${recipe.title}');
+
+
+        }, 1000, recipeId[3]);
+
+    }, 1500);
+
+}
+getRecipe();
     </script>
 </body>
 </html>
