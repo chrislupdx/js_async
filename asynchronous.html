@@ -90,8 +90,10 @@
         console.log(recipe);
         const related = await getRelated('dirty static syntax');
         console.log(related);
+
+        return recipe;
     }
-    getRecipeAW();
+    getRecipeAW().then(result => console.log(`${result} isresults`));   
 
     </script>
 </body>
