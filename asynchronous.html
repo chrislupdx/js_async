@@ -29,14 +29,17 @@ function getRecipe() {
 
         setTimeout( (id) => {
             const recipe= {title: "ugh", publisher: "sure"};
-            console.log('${id}: ${recipe.title}');
-
-
-        }, 1000, recipeId[3]);
+            console.log(`${id}: ${recipe.title}`);
+            
+            setTimeout(publisher => {
+                const recipe= {title: "more bullshit", publisher: "whatever"}
+                console.log(recipe);
+            }, 1500, recipe.publisher)
+        }, 5000, recipeId[3]);
 
     }, 1500);
-
 }
+
 getRecipe();
     </script>
 </body>
